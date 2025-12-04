@@ -1,0 +1,11 @@
+/* Highlight active link */
+.nav-link.active {
+    font-weight: bold;
+    color: #0d6efd !important; /* Bootstrap primary color */
+  }
+  
+  /* Optional: spacing for navbar */
+  .navbar {
+    margin-bottom: 20px;
+  }
+  

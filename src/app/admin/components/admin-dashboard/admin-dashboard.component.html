@@ -1,0 +1,107 @@
+<div class="container mt-4" id="dashboard-menu">
+
+    <button class="btn btn-primary w-100" (click)="onLogout()">
+      Logout
+    </button>
+
+    <h1 class="text-center mb-4">Dashboard</h1>
+  
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <img 
+            src="https://picsum.photos/300/200?random=1" 
+            class="card-img-top" 
+            alt="Home"
+          >
+          <div class="card-body">
+            <h5 class="card-title">Home</h5>
+            <p class="card-text">
+              Access the latest updates, announcements, and quick actions.
+            </p>
+            <a routerLink="/home" class="btn btn-primary w-100">Go to Home</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <img 
+            src="https://picsum.photos/300/200?random=2" 
+            class="card-img-top" 
+            alt="About Us"
+          >
+          <div class="card-body">
+            <h5 class="card-title">About Us</h5>
+            <p class="card-text">
+              Learn more about who we are and what we stand for.
+            </p>
+            <a routerLink="/about" class="btn btn-primary w-100">Learn More</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <img 
+            src="https://picsum.photos/300/200?random=3" 
+            class="card-img-top"
+            alt="Services"
+          >
+          <div class="card-body">
+            <h5 class="card-title">Services</h5>
+            <p class="card-text">
+              Browse the list of services we provide for our customers.
+            </p>
+            <a routerLink="/services" class="btn btn-primary w-100">View Services</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 4 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <img 
+            src="https://picsum.photos/300/200?random=4"
+            class="card-img-top"
+            alt="Contact"
+          >
+          <div class="card-body">
+            <h5 class="card-title">Contact</h5>
+            <p class="card-text">
+              Get in touch with us for support, information, or inquiries.
+            </p>
+            <a routerLink="/contact" class="btn btn-primary w-100">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Inactivity Warning Modal -->
+ @if(showModal)
+ {
+  <div class="modal-backdrop fade show"></div>
+ }
+
+ @if(showModal)
+ {
+  <div class="modal d-block" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Session Expiring</h5>
+      </div>
+      <div class="modal-body">
+        <p>Your session will expire in {{countdown}} seconds due to inactivity.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="stayLoggedIn()">Stay Logged In</button>
+      </div>
+    </div>
+  </div>
+</div>
+}
