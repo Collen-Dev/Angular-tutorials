@@ -1,0 +1,4 @@
+.modal {
+  background: rgba(0,0,0,0.5); /* optional fallback if backdrop fails */
+  z-index: 1050;
+}
