@@ -5,14 +5,15 @@ REM -----------------------------
 
 REM 1. Set your GitHub repo name (replace with yours), but
 REM in my case, this is a project name
-SET REPO_NAME=ctbusiness.ui.app
+SET REPO_NAME=Angular-tutorials
+SET PROJ_NAME=ctbusiness.ui.app
 
 REM 2. Clean previous build
 IF EXIST dist rmdir /s /q dist
 
 REM 3. Build Angular app for production
 echo Building Angular app...
-ng build --configuration production --base-href /%REPO_NAME%/
+ng build --configuration production --base-href /%PROJ_NAME%/
 IF ERRORLEVEL 1 (
     echo Build failed!
     exit /b 1
