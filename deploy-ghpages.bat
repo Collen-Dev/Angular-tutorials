@@ -11,7 +11,7 @@ IF EXIST dist rmdir /s /q dist
 
 REM 3. Build Angular app for production
 echo Building Angular app...
-ng build --prod --base-href /%REPO_NAME%/
+ng build --configuration production --base-href /%REPO_NAME%/
 IF ERRORLEVEL 1 (
     echo Build failed!
     exit /b 1
