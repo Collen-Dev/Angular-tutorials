@@ -1,14 +1,13 @@
 import { Component, OnInit, OnDestroy, inject } from '@angular/core';
 import { Subscription } from 'rxjs';
 import {CommonModule} from '@angular/common'
-import { HttpErrorResponse } from "@angular/common/http";
 import { AuthService } from '../../../services/auth.service'
 import { InactivityService } from '../../../services/inactivity.service';
-import { RouterOutlet, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [CommonModule],
   selector: 'app-admin-dashboard',
   templateUrl: './admin-dashboard.component.html'
 })
@@ -38,12 +37,4 @@ export class AdminDashboardComponent implements OnInit, OnDestroy {
     this.showModal = false;
   }
 
-  onLogout() {
-  this.auth.logout().subscribe({
-        next: () => this.router.navigate(['/admin/login']),
-        error: (err: HttpErrorResponse) => {
-          console.error(err); 
-        }
-      });
-}
 }
