@@ -8,8 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-     "predeploy": "ng build --configuration production --base-href /ctbusiness.ui.app/",
-  "deploy": "gh-pages -d dist/Angular-tutorials/browser"
+     "predeploy": "ng build --configuration production --base-href /Angular-tutorials/",
+  "deploy": "gh-pages -d dist/ctbusiness.ui.app/browser"
   },
   "private": true,
   "dependencies": {
